@@ -584,8 +584,8 @@
           <p>Do you want to jump on a quick 15 minute call?</p>
           <div class="checkbox">
             <input type="checkbox" />
-            <label for="">Yes pretty please :D</label>
-            <input type="checkbox" />
+            <label class="prettyPlease" for="">Yes pretty please :D</label>
+            <input class="emailForNow" type="checkbox" />
             <label for="">Let's talk through email for now</label>
           </div>
           <p style="margin-bottom: -10px">
@@ -2440,9 +2440,14 @@ footer h3 {
     margin-left: 0;
   }
 
+  .emailForNow {
+    margin-left: 190px;
+  }
+
   .checkbox label {
     margin-left: 0;
     margin-bottom: 0;
+    margin-top: -40px;
   }
 
   .ideasInput {
