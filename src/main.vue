@@ -568,22 +568,21 @@
           <div class="rowContainer">
             <div class="row">
               <p>First Name (required)</p>
+              <input type="text" />
               <p>Last Name (required)</p>
-            </div>
-            <div class="seconedRow">
-              <input type="text" />
               <input type="text" />
             </div>
+            <div class="seconedRow"></div>
           </div>
           <p>Your Email (required)</p>
-          <input type="email" />
+          <input class="emailInput" type="email" />
           <p>Company or brand (required)</p>
-          <input type="text" name="" id="" />
+          <input class="companyInput" type="text" name="" id="" />
           <p>Website URL (required)</p>
-          <input type="url" />
+          <input class="websiteInput" type="url" />
           <p>Do you want to jump on a quick 15 minute call?</p>
           <div class="checkbox">
-            <input type="checkbox" />
+            <input class="checkboxInput" type="checkbox" />
             <label class="prettyPlease" for="">Yes pretty please :D</label>
             <input class="emailForNow" type="checkbox" />
             <label for="">Let's talk through email for now</label>
@@ -1806,8 +1805,10 @@ i {
 .infoInputs {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 80px 0 0 270px;
   width: 100%;
+  gap: 20px;
 }
 
 .left {
@@ -1854,7 +1855,7 @@ i {
   align-items: flex-start;
   flex-direction: column;
   width: 55%;
-  margin-left: 380px;
+  /* margin-left: 380px; */
 }
 
 .right p {
@@ -1865,20 +1866,37 @@ i {
 
 .right input {
   border: 3px solid #000000;
-  height: 3vh;
+  /* height: 3vh; */
   width: 50%;
+}
+
+.companyInput,
+.websiteInput,
+.emailInput {
+  height: 3vh;
 }
 
 .rowContainer {
   margin-right: 300px;
 }
 
+.emailForNow,
+.checkboxInput {
+  height: 2vh;
+}
+
 .row {
   display: flex;
   justify-content: space-evenly;
-  flex-direction: row;
-  align-items: center;
-  margin-left: -16px;
+  align-items: flex-start;
+  /* height: 6vh; */
+  flex-direction: column;
+  /* margin-left: -16px; */
+}
+
+.row input {
+  width: 26vw;
+  height: 3vh;
 }
 
 .seconedRow {
@@ -1897,11 +1915,11 @@ i {
 
 .checkbox {
   width: 70%;
-  margin-left: -105px;
+  margin-left: -135px;
 }
 
 .checkbox label {
-  margin-left: -85px;
+  margin-left: -96px;
   margin-bottom: 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
@@ -2062,9 +2080,13 @@ footer h3 {
   .fourInfo,
   .rowOne,
   .rowTwo,
-  .infoInputs,
   .upperFooter {
     flex-direction: column;
+  }
+
+  .infoInputs {
+    flex-direction: column;
+    padding: 0;
   }
 
   .fullContainer {
@@ -2414,8 +2436,8 @@ footer h3 {
     width: 100%;
   }
 
-  .row,
-  .seconedRow {
+  .seconedRow,
+  .row {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 0;
